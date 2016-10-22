@@ -1,0 +1,25 @@
+<html><head><link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="shared-styles.html">
+
+</head><body><dom-module id="my-view3">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+
+        padding: 10px;
+      }
+     .ifr {
+	 width: 100%;
+	 min-height: 600px;
+     }
+    </style>
+
+    <iframe id="iFrame1" frameborder="0" class="ifr" src="http://martinezagonetke.herokuapp.com/welcome/"></iframe> 
+    
+  </template>
+  <script type="application/javascript">function resizeIFrameToFitContent(e){e.width=e.contentWindow.document.body.scrollWidth,e.height=e.contentWindow.document.body.scrollHeight}window.addEventListener("DOMContentReady",function(e){var t=document.getElementById("iFrame1");resizeIFrameToFitContent(t);for(var n=document.querySelectorAll("iframe"),o=0;o<n.length;o++)resizeIFrameToFitContent(n[o])});</script>
+  
+  <script>Polymer({is:"my-view3"});</script>
+</dom-module>
+</body></html>

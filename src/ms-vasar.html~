@@ -1,0 +1,110 @@
+/<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<link rel="import" href="shared-styles.html">
+<dom-module id="ms-vasar">
+  <template>
+    <style include="shared-styles iron-flex iron-flex-alignment">
+     :host {
+         display: block;
+         padding: 10px;
+     }
+     .textcenter  {
+	 text-align: center;
+	 align-items: center;
+	 justify-content: center;
+     }
+     .igodine {
+	 font-size: 200%;
+     }
+     #vasar {
+	 background-image: url('/images/background.png');
+     }
+     #vasar_title {
+	 font-family: 'lansbury';
+	 text-align: center;
+	 font-size: 400%;
+	 color: #15748a;
+     }
+     .vtitle {
+	 font-family: 'lansbury';
+	 font-size: 300%;
+	 color: #15748a;
+     }
+     #book_image {
+	 max-width: 200px;
+	 box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+     }
+     #box_image {
+	 max-width: 400px;
+     }
+     #facebook_image {
+	 max-width: 200px;
+	
+     }
+     .mailzag {
+	 text-align: center;	 
+	 padding: 20px;
+     }
+    </style>
+    
+    <div class="card layout vertical" id="vasar">
+	<div id="vasar_title">
+	    Dobrodosli u Martin svet
+	</div>
+	
+	<div class="layout horizontal wrap">
+	    <div>
+		<img id="book_image" src="/images/vasar_zagonetki.jpg">
+	    </div>
+	    
+	    <div class="flex mailzag">
+		Rešenje poslednje zagonetke iz knjige<br/>
+		<div class="vtitle">Vasar zagonetki</div>
+		pošaljite na elektronsku adresu:
+		<a href="mailto:zagonetke@martasmart.rs">zagonetke@martasmart.rs</a><br/>
+		Ukoliko je odgovor tačan, očekujte poruku u kojoj ćete biti obavešteni da ste uspeli da rešite najtežu misteriju!
+		Ukoliko ne stigne obaveštenje, pokušajte ponovo.
+	    </div>
+	</div>
+	
+	<div class="textcenter">
+	    <a href="https://www.facebook.com/martasmartbooks/">
+		<img id="facebook_image" src="/images/facebook.png">
+	    </a>
+	</div>
+
+	<div class="layout horizontal wrap textcenter igodine  ">
+	    <div class="layout vertical">
+		<div>Martina zagonetna kutija </div>
+		<div> <big>IGRAČKA GODINE</big> </div>
+		<div> * Po odluci stručnog žirija </div>
+		<div> Priljateji dece Srbije</div>
+	    </div>
+	    
+	    <div class="flex mailzag">
+		<a href="https://goo.gl/64FFGb">
+		    <img id="box_image" src="/images/kutija.png">
+		</a>
+	    </div>
+	</div>
+
+    </div>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'ms-vasar'
+    });
+  </script>
+</dom-module>
